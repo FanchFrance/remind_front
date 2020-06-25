@@ -9,7 +9,7 @@ html {
 body {
   margin: 0;
   overflow-x: hidden;
-  font-family: 'Muli', 'Comfortaa', Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', 'Comfortaa', Arial, Helvetica, sans-serif;
   background-color: #f7f8fc !important;
   --bg-nav: #363740;
 }
@@ -26,7 +26,7 @@ label,
 tr,
 th,
 td {
-  font-family: 'Muli', Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 /* LOGIN */
@@ -53,141 +53,8 @@ td {
   color: #9fa2b4;
 }
 
-/* NAVBAR */
 
-.Nav-container {
-  position: absolute;
-  width: 255px;
-  height: 100%;
-  left: 0px;
-  top: 0px;
-  background-color: var(--bg-nav);
-}
 
-.Nav-logo {
-  margin-bottom: 70px;
-  text-align: center;
-}
-
-.Img-logo {
-  width: 200px;
-  margin-top: 20px;
-}
-
-hr {
-  background-color: #555;
-  border: none;
-  height: 1px;
-}
-
-ul {
-  padding: 0px;
-}
-
-li {
-  list-style: none;
-  padding: 15px 0px 15px 50px;
-}
-
-.brand-interface {
-  color: #a4a6b3;
-}
-
-a:hover {
-  text-decoration: none !important;
-}
-
-a:hover>.brand-interface {
-  text-decoration: none;
-  color: #fff;
-}
-
-a:focus {
-  text-decoration: none;
-  color: #fff;
-}
-
-a:focus>.brand-interface {
-  background: #3e4049;
-  border-left: 3px solid #fff;
-  color: #fff;
-}
-
-/* FAS ICONS */
-
-.fas {
-  margin-right: 20px;
-}
-
-.fas:focus {
-  outline: none;
-}
-
-a .fa-pen {
-  color: #000 !important;
-}
-
-a .fa-pen:hover {
-  color: #555 !important;
-}
-
-.fa-trash:hover {
-  color: #ff5733;
-}
-
-.fa-power-off:hover {
-  color: #ff5733;
-}
-
-/* HEADER */
-
-.Img-admin {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 1px solid #dfe0eb;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.Admin-name {
-  font-size: 1rem;
-  padding: 17px 10px 15px 0px;
-}
-
-.Admin-brand h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  padding: 12px 0px 12px 20px;
-}
-
-.Admin-board {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 35px !important;
-}
-
-.Admin-board .Disconnect {
-  cursor: pointer;
-}
-
-.Admin-board .Disconnect:focus {
-  outline: none;
-}
-
-.Admin-board .fas {
-  margin-top: 20px;
-  margin-right: 50px;
-}
-
-.Header-container {
-  display: flex;
-  position: absolute;
-  width: 100%;
-  height: 70px;
-  left: 255px;
-  top: 0px;
-}
 
 /* CONTAINER */
 
