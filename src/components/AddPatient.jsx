@@ -26,7 +26,7 @@ const AddPatient = () => {
 
   const submitForm = (event) => {
     event.preventDefault();
-    const url = "http://localhost:5000/api/patients/";
+    const url = "http://localhost:5000/api/patients";
     axios
       .post(url, inputs)
       .then((res) => res.data)
@@ -53,7 +53,7 @@ const AddPatient = () => {
         </Modal.Header>
 
         <Modal.Footer>
-          <Link to="/">
+          <Link to="/patients">
             <button type="button" className="ButtonAction Action">
               Ok
             </button>
