@@ -2,37 +2,89 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* NAVBAR */
+
+.Nav-container {
+  position: absolute;
+  width: 255px;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background-color: var(--bg-nav);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Nav-logo {
+  margin-bottom: 70px;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Img-logo {
+  width: 200px;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+hr {
+  background-color: #555;
+  border: none;
+  height: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul {
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+  padding: 15px 0px 15px 50px;
+}
+
+.brand-interface {
+  color: #a4a6b3;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+a:hover>.brand-interface {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:focus {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:focus>.brand-interface {
+  background: #3e4049;
+  border-left: 3px solid #fff;
+  color: #fff;
+}
+
+/* FAS ICONS */
+
+.fas {
+  margin-right: 20px;
+}
+
+.fas:focus {
+  outline: none;
+}
+
+a .fa-pen {
+  color: #000 !important;
+}
+
+a .fa-pen:hover {
+  color: #555 !important;
+}
+
+.fa-trash:hover {
+  color: #ff5733;
+}
+
+.fa-power-off:hover {
+  color: #ff5733;
 }
