@@ -5,28 +5,28 @@ import axios from "axios";
 import ButtonAction from "./Buttons/ButtonAction";
 
 const AddPatient = () => {
-  const [doctors, setDoctors] = useState();
+  // const [doctors, setDoctors] = useState();
 
-  useEffect(() => {
-    axios
-      .get(`http://localhost:5000/api/doctors`)
-      .then((response) => response.data)
-      .then((data) => setDoctors(data));
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get(`http://localhost:5000/api/doctors`)
+  //     .then((response) => response.data)
+  //     .then((data) => setDoctors(data));
+  // }, []);
 
   const [inputs, setInputs] = useState({
     name: "",
     lastname: "",
     poids: "",
     taille: "",
-    doctor_id: "",
+    doctor_id: "1",
   });
 
   const [show, handleShow] = useState(false);
 
   const submitForm = (event) => {
     event.preventDefault();
-    const url = "http://localhost:5000/api/patients";
+    const url = "http://localhost:5000/api/patients/";
     axios
       .post(url, inputs)
       .then((res) => res.data)
@@ -66,61 +66,128 @@ const AddPatient = () => {
           <div className="col-md-4">
             <h2 className="mb-5">Ajouter un patient</h2>
           </div>
-          <div className="ActionPanel col-md-8">
-            <Link to="/">
-              <ButtonAction name="Retour" display="Return" />
-            </Link>
-          </div>
         </div>
 
         <Form onSubmit={submitForm}>
-          <Form.Group onChange={onChange}>
-            <Form.Label>Nom du patient</Form.Label>
-            <Form.Control type="text" name="name" />
-          </Form.Group>
-          <Form.Group onChange={onChange}>
-            <Form.Label>Prénom du patient</Form.Label>
-            <Form.Control type="text" name="lastname" />
-          </Form.Group>
-
           <Row>
-            <Col>
+            <Col md={3}>
               <Form.Group onChange={onChange}>
-                <Form.Label>Poids</Form.Label>
-                <Form.Control type="text" name="poids" />
+                <Form.Label>Nom</Form.Label>
+                <Form.Control type="text" name="name" />
+              </Form.Group>
+            </Col>
+            <Col md={3}>
+              <Form.Group onChange={onChange}>
+                <Form.Label>Prénom</Form.Label>
+                <Form.Control type="text" name="lastname" />
               </Form.Group>
             </Col>
           </Row>
 
           <Row>
-            <Col>
+            <Col md={2}>
+              <Form.Group onChange={onChange}>
+                <Form.Label>Poids</Form.Label>
+                <Form.Control type="text" name="poids" />
+              </Form.Group>
+            </Col>
+            <Col md={2}>
               <Form.Group onChange={onChange}>
                 <Form.Label>Taille</Form.Label>
                 <Form.Control type="text" name="taille" />
               </Form.Group>
             </Col>
           </Row>
+          {/*
 
-          <Row>
-            {doctors && (
-              <Col>
-                <Form.Group>
-                  <Form.Label>Tout les docteurs</Form.Label>
-                  <Form.Control
-                    name="doctor_id"
-                    as="select"
-                    onChange={onChange}
-                  >
-                    {doctors.map((doctor) => (
-                      <option key={doctor.id} value={doctor.id}>
-                        {`${doctor.name} ${doctor.lastname}`}
-                      </option>
-                    ))}
+          <Form.Group md={8}>
+            <Row>
+              <Col md={4}>
+                <Form.Group controlId="exampleForm.ControlSelect1">
+                  <Form.Label>Médication</Form.Label>
+                  <Form.Control as="select" name="drugs">
+                    <option>Modopar</option>
                   </Form.Control>
                 </Form.Group>
               </Col>
-            )}
-          </Row>
+            </Row>
+            <Row>
+              <Col md={2}>
+                <Form.Group onChange={onChange}>
+                  <Form.Label>Horaire de prise</Form.Label>
+                  <Form.Control
+                    type="time"
+                    name="time"
+                    placeholder="hrs:mins"
+                    pattern="^([0-1]?[0-9]|2[0-4]):([0-5][0-9])(:[0-5][0-9])?$"
+                    class="inputs time"
+                    required
+                  />
+                </Form.Group>
+              </Col>
+              <Col md={2}>
+                <Form.Group>
+                  <Form.Label>Posologie</Form.Label>
+                  <Form.Control as="select" name="posologie">
+                    <option>15mg</option>
+                    <option>30mg</option>
+                    <option>60mg</option>
+                    <option>90mg</option>
+                  </Form.Control>
+                </Form.Group>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={2}>
+                <Form.Group onChange={onChange}>
+                  <Form.Control
+                    type="time"
+                    name="time"
+                    placeholder="hrs:mins"
+                    pattern="^([0-1]?[0-9]|2[0-4]):([0-5][0-9])(:[0-5][0-9])?$"
+                    class="inputs time"
+                    required
+                  />
+                </Form.Group>
+              </Col>
+              <Col md={2}>
+                <Form.Group>
+                  <Form.Control as="select" name="posologie">
+                    <option>15mg</option>
+                    <option>30mg</option>
+                    <option>60mg</option>
+                    <option>90mg</option>
+                  </Form.Control>
+                </Form.Group>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={2}>
+                <Form.Group onChange={onChange}>
+                  <Form.Control
+                    type="time"
+                    name="time"
+                    placeholder="hrs:mins"
+                    pattern="^([0-1]?[0-9]|2[0-4]):([0-5][0-9])(:[0-5][0-9])?$"
+                    class="inputs time"
+                    required
+                  />
+                </Form.Group>
+              </Col>
+              <Col md={2}>
+                <Form.Group>
+                  <Form.Control as="select" name="posologie">
+                    <option>15mg</option>
+                    <option>30mg</option>
+                    <option>60mg</option>
+                    <option>90mg</option>
+                  </Form.Control>
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form.Group>
+
+*/}
 
           <button
             className="ButtonAction Action"

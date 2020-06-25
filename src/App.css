@@ -59,7 +59,7 @@ td {
 /* CONTAINER */
 
 .ContainerBody {
-  background-color: #fff;
+  background-color: #F0F8FF;
   border: 1px solid #dfe0eb;
   border-radius: 5px;
   padding: 30px 30px !important;
@@ -185,18 +185,18 @@ td {
 
 .ButtonAction {
   text-align: center;
-  color: #fff;
+  color: white;
   padding: 15px 25px;
   border: none;
   border-radius: 5px;
 }
 
 .Action {
-  background-color: #f1b155;
+  background-color: #007bff;
 }
 
 .Action:hover {
-  background-color: rgb(207, 146, 60);
+  background-color: #0c3ce8;
 }
 
 .AddUser {
