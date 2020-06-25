@@ -5,6 +5,8 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Patients from "./components/Patients";
 import AddPatient from "./components/AddPatient";
+import TreatmentAdd from "./components/TreatmentAdd";
+import Treatment from "./components/Treatment";
 
 function App() {
   return (
@@ -12,10 +14,18 @@ function App() {
       <Switch>
         <Route exact path="/patients" component={Patients} />
       </Switch>
-
       <Switch>
         <Route exact path="/add-patient" component={AddPatient} />
       </Switch>
+      <Switch>
+        <Route exact path="/add-treatment" component={TreatmentAdd} />
+      </Switch>
+      <Switch>
+        <Route exact path="/patients/:id/drugs/:id" component={Treatment} />
+      </Switch>
+      {/* <Switch>
+        <Route exact path="/treatment" component={Treatment} />
+      </Switch> */}
     </div>
   );
 }
