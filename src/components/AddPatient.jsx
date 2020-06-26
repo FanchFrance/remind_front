@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Modal, Form, Col, Row } from "react-bootstrap";
+import { Modal, Form, Col, Row, ListGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import ButtonAction from "./Buttons/ButtonAction";
@@ -106,6 +106,7 @@ const AddPatient = () => {
             Créer
           </button>
         </Form>
+        <Row></Row>
       </section>
     </div>
   );

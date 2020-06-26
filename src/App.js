@@ -7,6 +7,7 @@ import Patients from "./components/Patients";
 import AddPatient from "./components/AddPatient";
 import TreatmentAdd from "./components/TreatmentAdd";
 import Treatment from "./components/Treatment";
+import DrugTime from "./components/DrugsTime";
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
       {/* <Switch>
         <Route exact path="/treatment" component={Treatment} />
       </Switch> */}
+      <Switch>
+        <Route exact path="/drug-time-test-composant" component={DrugTime} />
+      </Switch>
     </div>
   );
 }
