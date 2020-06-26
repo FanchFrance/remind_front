@@ -8,11 +8,13 @@ class Treatment extends Component {
   };
 
   componentDidMount() {
-    const url = "http://localhost:5000/api/treatments";
-    const url2 = "http://localhost:5000/api/patients/:idPatient/drugs/:idDrug";
+    const { match } = this.props;
+    console.log(match);
+    const idPatient = match.params.id;
+    const url = `http://localhost:5000/api/patients/${idPatient}/drugs`;
 
     axios
-      .get(url2)
+      .get(url)
       .then((response) => response.data)
       .then((data) => this.setState({ traitements: data }));
   }
@@ -20,9 +22,13 @@ class Treatment extends Component {
   render() {
     const { traitements } = this.state;
 
+    console.log(traitements);
+
     return (
       <div>
-        <div>Page Liste de traitements</div>
+        <div className="title">
+          <h2>Page Liste de traitements</h2>
+        </div>
         <Table>
           <thead>
             <tr>
@@ -38,19 +44,29 @@ class Treatment extends Component {
             </tr>
           </thead>
           <tbody>
-            {traitements.map((traitement) => (
-              <tr>
-                <td>{traitement.patient_id}</td>
-                <td>{traitement.drug_id}</td>
-                <td>{traitement.day_date}</td>
-                <td>{traitement.hour_prise1}</td>
-                <td>{traitement.check_prise1}</td>
-                <td>{traitement.hour_prise2}</td>
-                <td>{traitement.check_prise2}</td>
-                <td>{traitement.hour_prise3}</td>
-                <td>{traitement.check_prise3}</td>
-              </tr>
-            ))}
+            {traitements.length > 0 ? (
+              traitements.map((traitement) => (
+                <tr>
+                  <td>{traitement.patient_id}</td>
+                  <td>{traitement.drug_id}</td>
+                  <td>{traitement.day_date}</td>
+                  <td>
+                    {traitement.hour_prise1}:{traitement.minute_prise1}
+                  </td>
+                  <td>{traitement.check_prise1}</td>
+                  <td>
+                    {traitement.hour_prise2}:{traitement.minute_prise2}
+                  </td>
+                  <td>{traitement.check_prise2}</td>
+                  <td>
+                    {traitement.hour_prise3}:{traitement.minute_prise3}
+                  </td>
+                  <td>{traitement.check_prise3}</td>
+                </tr>
+              ))
+            ) : (
+              <div>Pas de traitements</div>
+            )}
           </tbody>
         </Table>
       </div>

@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-import Header from './Header';
+import Header from "./Header";
 
-import './styles/patients.css'
+import "./styles/patients.css";
 
 class Patients extends Component {
   state = {
@@ -26,7 +27,8 @@ class Patients extends Component {
         <Header />
         <div className="title">
           <h2>Mes patients</h2>
-          </div>
+          <Link to="/add-patient">Ajouter un patient</Link>
+        </div>
         <Table>
           <thead>
             <tr>
@@ -35,6 +37,7 @@ class Patients extends Component {
               <th>Name</th>
               <th>Poids</th>
               <th>Taille</th>
+              <th>Traitements</th>
             </tr>
           </thead>
           <tbody>
@@ -45,6 +48,9 @@ class Patients extends Component {
                 <td>{patient.name}</td>
                 <td>{patient.poids}</td>
                 <td>{patient.taille}</td>
+                <td>
+                  <Link to={`/patients/${patient.id}/drugs`}>Voir</Link>
+                </td>
               </tr>
             ))}
           </tbody>
