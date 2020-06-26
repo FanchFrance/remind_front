@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 60px;
+  height: 110px;
 }
 
 .patient {
@@ -15,22 +15,32 @@
 }
 
 .date {
-  background-color: #ABE8EB;
-  width: 15%;
+  width: 100px;
+  height: 30px;
   justify-content: center;
+  text-align: center;
 }
 
 .patient {
-  background-color: #ABE8EB;
   width: 20%;
 }
 
+.patientName {
+  font-weight: bold;
+
+}
+
 .linkModify {
-  color: red;
+  color: black;
 }
 
 .trackertable {
   border: 1px solid black;
+}
+
+.hoursTable {
+  display: flex;
+  width: 1000px;
 }
 
 .squareContainer {
@@ -38,4 +48,34 @@
   width: 150px;
   height: 150px;
   margin: 10px;
+}
+
+.hour {
+  text-align: center;
+  padding:10px;
+  background-color: #ABE8EB;
+}
+
+.prise {
+  padding: 10px;
+  height: 60px;
+}
+
+
+.priseOk {
+  padding: 10px;
+  height: 60px;
+  color: green;
+}
+
+.priseKo {
+  padding: 10px;
+  height: 60px;
+  color: red;
+}
+
+.symptome {
+padding: 10px;
+border-top: 1px solid #ABE8EB;
+height: 50px;
 }

@@ -2,15 +2,15 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {Button, ButtonGroup, Pagination} from 'react-bootstrap';
-import TreatmentSquare from './TreatmentSquare';
-
-import Header from './Header';
-import Navbar from './MyNavbar';
-
-import './styles/treatments.css';
 
 
-function TreatmentTracker () {
+import Header from '../Header';
+import Navbar from '../MyNavbar';
+
+import '../styles/treatments.css';
+
+
+function DayMay () {
 
   return (
     <>
@@ -31,11 +31,9 @@ function TreatmentTracker () {
               <Pagination.First />
               <Pagination.Prev />
               <Pagination.Ellipsis />
-                <Link to="/patients">
-                  <Pagination.Item>25</Pagination.Item>
-                </Link>
-              <Pagination.Item active>26</Pagination.Item>
-              <Pagination.Item>27</Pagination.Item>
+              <Pagination.Item>{25}</Pagination.Item>
+              <Pagination.Item active>{26}</Pagination.Item>
+              <Pagination.Item>{27}</Pagination.Item>
               <Pagination.Ellipsis />
               <Pagination.Next />
               <Pagination.Last />
@@ -185,4 +183,4 @@ function TreatmentTracker () {
     </>
   )};
 
-export default TreatmentTracker;
+export default DayMay;

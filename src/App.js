@@ -15,6 +15,11 @@ import NextPill from "./components/NextPill";
 import Symptoms from "./components/Symptoms";
 import TreatmentTracker from "./components/TreatmentTracker";
 
+import Day25 from "./components/days/Day25"
+import Day27 from "./components/days/Day27";
+import DayMay from "./components/days/DayMay";
+
+
 function App() {
   return (
     <div className="App">
@@ -53,9 +58,17 @@ function App() {
           component={TreatmentTracker}
         />
       </Switch>
-      {/* <Switch>
-        <Route exact path="/treatment" component={Treatment} />
-      </Switch> */}
+      
+      <Switch>
+        <Route exact path="/Day25" component={Day25} />
+      </Switch>
+       <Switch>
+        <Route exact path="/Day27" component={Day27} />
+      </Switch>
+      <Switch>
+        <Route exact path="/DayMay" component={DayMay} />
+      </Switch>
+
     </div>
   );
 }
