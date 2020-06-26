@@ -37,17 +37,17 @@ const AddPatient = () => {
   return (
     <div>
       <ListGroup className="mb-2" horizontal="lg">
-        <ListGroup.Item variant="primary">Modopar 30mg</ListGroup.Item>
-        <ListGroup.Item>09:00</ListGroup.Item>
+        <ListGroup.Item variant="primary">Modopar 100mg</ListGroup.Item>
+        <ListGroup.Item>07:00</ListGroup.Item>
       </ListGroup>
 
       <ListGroup className="mb-2" horizontal="lg">
-        <ListGroup.Item variant="primary">Modopar 60mg</ListGroup.Item>
-        <ListGroup.Item>12:00</ListGroup.Item>
+        <ListGroup.Item variant="primary">Modopar 200mg</ListGroup.Item>
+        <ListGroup.Item>10:00</ListGroup.Item>
       </ListGroup>
 
       <ListGroup className="mb-2" horizontal="lg">
-        <ListGroup.Item variant="primary">Modopar 30mg</ListGroup.Item>
+        <ListGroup.Item variant="primary">Modopar 100mg</ListGroup.Item>
         <ListGroup.Item>15:00</ListGroup.Item>
       </ListGroup>
     </div>
