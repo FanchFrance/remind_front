@@ -1,3 +1,27 @@
 .AddTreat {
     width: 250px;
 }
+
+.symptoms_title {
+    display: flex;
+    justify-content: center;
+    font-style: Andale Mono, monospace;
+}
+
+.symptoms {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.symptom {
+    width: 10rem;
+    height: 10rem;
+    padding: 10 10 10 10;
+    background: #fafafa;
+    box-shadow: 2px 2px 8px #aaa;
+    font: bold 13px Arial;
+    border-radius: 50%;
+    color: #555;
+}

@@ -7,6 +7,8 @@ import Patients from "./components/Patients";
 import AddPatient from "./components/AddPatient";
 import TreatmentAdd from "./components/TreatmentAdd";
 import Treatment from "./components/Treatment";
+import NextPill from "./components/NextPill";
+import Symptoms from "./components/Symptoms";
 
 function App() {
   return (
@@ -22,6 +24,12 @@ function App() {
       </Switch>
       <Switch>
         <Route exact path="/patients/:id/drugs/:id" component={Treatment} />
+      </Switch>
+      <Switch>
+        <Route exact path="/nextpill" component={NextPill} />
+      </Switch>
+      <Switch>
+        <Route exact path="/symptoms" component={Symptoms} />
       </Switch>
       {/* <Switch>
         <Route exact path="/treatment" component={Treatment} />
