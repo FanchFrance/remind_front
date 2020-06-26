@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home";
 import Register from "./components/Register";
 import Patients from "./components/Patients";
+import Patient from "./components/Patient";
 import AddPatient from "./components/AddPatient";
 import TreatmentAdd from "./components/TreatmentAdd";
 import Treatment from "./components/Treatment";
@@ -24,6 +25,9 @@ function App() {
         <Route exact path="/register" component={Register} />
       </Switch>
       <Switch>
+        <Route exact path="/patient" component={Patient} />
+      </Switch>
+      <Switch>
         <Route exact path="/patients" component={Patients} />
       </Switch>
       <Switch>
@@ -37,6 +41,10 @@ function App() {
       </Switch>
       <Switch>
         <Route exact path="/nextpill/:idPatient" component={NextPill} />
+        <Route exact path="/patient/tracker" component={TreatmentTracker} />
+      </Switch>
+      <Switch>
+        <Route exact path="/nextpill" component={NextPill} />
       </Switch>
       <Switch>
         <Route exact path="/symptoms" component={Symptoms} />

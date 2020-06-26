@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import ButtonAction from "./Buttons/ButtonAction";
 
+import Header from './Header';
+import Navbar from './MyNavbar';
+
 const AddPatient = () => {
   // const [doctors, setDoctors] = useState();
 
@@ -44,70 +47,84 @@ const AddPatient = () => {
   };
 
   return (
-    <div>
-      <Modal size="lg" show={show} centered>
-        <Modal.Header closeButton>
-          <Modal.Title>
-            Le patient {inputs.name} {inputs.lastname} a bien été ajouté !
-          </Modal.Title>
-        </Modal.Header>
+    <>
+      <Header />
 
-        <Modal.Footer>
-          <Link to="/patients">
-            <button type="button" className="ButtonAction Action">
-              Ok
-            </button>
-          </Link>
-        </Modal.Footer>
-      </Modal>
+      <div className="mainContent">
+        <Navbar />
+        <div className="content">
+          <div>
+            <Modal size="lg" show={show} centered>
+              <Modal.Header closeButton>
+                <Modal.Title>
+                  Le patient {inputs.name} {inputs.lastname} a bien été ajouté !
+                </Modal.Title>
+              </Modal.Header>
 
-      <section className="ContainerBody">
-        <div className="Panel">
-          <div className="col-md-4">
-            <h2 className="mb-5">Ajouter un patient</h2>
+              <Modal.Footer>
+                <Link to="/patients">
+                  <button type="button" className="ButtonAction Action">
+                    Ok
+                  </button>
+                </Link>
+              </Modal.Footer>
+            </Modal>
+
+            <section className="ContainerBody">
+              <div className="Panel">
+                <div className="col-md-4">
+                  <h2 className="mb-5">Créer un patient</h2>
+                </div>
+              </div>
+
+              <Form onSubmit={submitForm}>
+                <Row>
+                  <Col md={3}>
+                    <Form.Group onChange={onChange}>
+                      <Form.Label>Nom</Form.Label>
+                      <Form.Control type="text" name="name" />
+                    </Form.Group>
+                  </Col>
+                  <Col md={3}>
+                    <Form.Group onChange={onChange}>
+                      <Form.Label>Prénom</Form.Label>
+                      <Form.Control type="text" name="lastname" />
+                    </Form.Group>
+                  </Col>
+                </Row>
+
+                <Row>
+                  <Col md={2}>
+                    <Form.Group onChange={onChange}>
+                      <Form.Label>Poids</Form.Label>
+                      <Form.Control type="text" name="poids" />
+                    </Form.Group>
+                  </Col>
+                  <Col md={2}>
+                    <Form.Group onChange={onChange}>
+                      <Form.Label>Taille</Form.Label>
+                      <Form.Control type="text" name="taille" />
+                    </Form.Group>
+                  </Col>
+                </Row>
+                <button
+                  className="ButtonAction Action"
+                  type="submit"
+                  onClick={() => handleShow(true)}
+                >
+                  Créer
+                </button>
+              </Form>
+            </section>
           </div>
+
         </div>
 
-        <Form onSubmit={submitForm}>
-          <Row>
-            <Col md={3}>
-              <Form.Group onChange={onChange}>
-                <Form.Label>Nom</Form.Label>
-                <Form.Control type="text" name="name" />
-              </Form.Group>
-            </Col>
-            <Col md={3}>
-              <Form.Group onChange={onChange}>
-                <Form.Label>Prénom</Form.Label>
-                <Form.Control type="text" name="lastname" />
-              </Form.Group>
-            </Col>
-          </Row>
+      </div>
 
-          <Row>
-            <Col md={2}>
-              <Form.Group onChange={onChange}>
-                <Form.Label>Poids</Form.Label>
-                <Form.Control type="text" name="poids" />
-              </Form.Group>
-            </Col>
-            <Col md={2}>
-              <Form.Group onChange={onChange}>
-                <Form.Label>Taille</Form.Label>
-                <Form.Control type="text" name="taille" />
-              </Form.Group>
-            </Col>
-          </Row>
-          <button
-            className="ButtonAction Action"
-            type="submit"
-            onClick={() => handleShow(true)}
-          >
-            Créer
-          </button>
-        </Form>
-      </section>
-    </div>
+
+    
+    </>
   );
 };
 

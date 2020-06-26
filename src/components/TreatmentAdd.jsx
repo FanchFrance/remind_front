@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import ButtonAction from "./Buttons/ButtonAction";
 
+import Header from './Header';
+import Navbar from './MyNavbar';
+
 const TreatmentAdd = () => {
   // const [doctors, setDoctors] = useState();
 
@@ -43,6 +46,11 @@ const TreatmentAdd = () => {
   };
 
   return (
+    <>
+      <Header />
+      <div className="mainContent">
+        <Navbar />
+        <div className="content">
     <div>
       <Modal size="lg" show={show} centered>
         <Modal.Footer>
@@ -107,6 +115,14 @@ const TreatmentAdd = () => {
         </Form>
       </section>
     </div>
+
+        </div>
+      </div>
+      
+  
+  
+    </>
+
   );
 };
 

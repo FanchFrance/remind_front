@@ -49,7 +49,7 @@ class Patients extends Component {
                 <td>{patient.poids}</td>
                 <td>{patient.taille}</td>
                 <td>
-                  <Link to={`/patients/${patient.id}/drugs`}>Voir</Link>
+                  <Link to={`/patients/${patient.id}/drun`}>Voir</Link>
                 </td>
               </tr>
             ))}
