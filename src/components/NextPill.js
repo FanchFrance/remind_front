@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import { ListGroup, Button } from "react-bootstrap";
 import moment from "moment";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "./styles/NextPill.css";
 
 export default class NextPill extends Component {
   state = {
@@ -69,23 +71,35 @@ export default class NextPill extends Component {
       );
     }
     return (
-      <div>
+      <div className="nextPillContainer">
         <div className="heureNow">{moment().format("HH:mm")}</div>
         <div></div>
-        <p>Prochaine prise</p>
         {priseMinute - moment().format("mm") <= 0 &&
         priseHour - moment().format("HH") <= 0 ? (
-          <h1>Busted!</h1>
+          <h1>C'est l'heure de la prise</h1>
         ) : (
-          <h1>Time Remaining: {fullTime}</h1>
+          <h1>Temps restant avant la prise: {fullTime}</h1>
         )}
-        <p>{drug.DCI}</p>
-        <p>{drug.posologie}</p>
-        <button onClick={() => this.checkPrise()}>
+
+        <ListGroup className="mb-2" horizontal="lg">
+          <ListGroup.Item variant="primary">{drug.DCI}</ListGroup.Item>
+          <ListGroup.Item>{drug.posologie}</ListGroup.Item>
+        </ListGroup>
+
+        {/* <button onClick={() => this.checkPrise()}>
           {checkPrise1 === "true"
-            ? "J'ai déjà pris mon traitement"
+            ? "Je prends mon traitement"
             : "Je prends mon traitement"}
-        </button>
+        </button> */}
+        <Button onClick={() => this.checkPrise()} variant="success">
+          {" "}
+          {checkPrise1 === "true"
+            ? "Je prends mon traitement"
+            : "Je prends mon traitement"}{" "}
+        </Button>
+        <Link to="/symptoms">
+          <Button variant="warning">Symptomes</Button>
+        </Link>
       </div>
     );
   }
