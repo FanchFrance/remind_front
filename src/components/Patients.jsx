@@ -3,10 +3,11 @@ import axios from "axios";
 import { Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-import Header from "./Header";
+import Header from './Header';
+import Navbar from './MyNavbar';
 
 import "./styles/patients.css";
-
+ 
 class Patients extends Component {
   state = {
     patients: [],
@@ -24,10 +25,12 @@ class Patients extends Component {
 
     return (
       <div className="containpat">
-        <Header />
-        <div className="title">
+      <Header />
+        <div className="mainContent">
+          <Navbar />
+          <div className="content">
+          <div className="title">
           <h2>Mes patients</h2>
-          <Link to="/add-patient">Ajouter un patient</Link>
         </div>
         <Table>
           <thead>
@@ -56,6 +59,9 @@ class Patients extends Component {
           </tbody>
         </Table>
       </div>
+        </div>
+      </div>
+        
     );
   }
 }
