@@ -49,6 +49,14 @@
   margin: 10px 0;
 }
 
+.forgot-password {
+  color: #42B746;
+}
+
+a {
+  color: #42B746;
+}
+
 .register {
   display: flex;
   align-items:center;
