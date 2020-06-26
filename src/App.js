@@ -42,9 +42,10 @@ function App() {
         <Route exact path="/add-treatment" component={TreatmentAdd} />
       </Switch>
       <Switch>
-        <Route exact path="/patients/:id/drugs/:id" component={Treatment} />
+        <Route exact path="/patients/:id/drugs" component={Treatment} />
       </Switch>
       <Switch>
+        <Route exact path="/nextpill/:idPatient" component={NextPill} />
         <Route exact path="/patient/tracker" component={TreatmentTracker} />
       </Switch>
       <Switch>
