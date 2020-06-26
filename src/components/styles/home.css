@@ -59,10 +59,14 @@ a {
 
 .register {
   display: flex;
+  flex-direction: column;
   align-items:center;
   justify-content: center;
   text-align: center;
+  margin: 80px;
 }
+
+.register h3
 
 .register button {
   background-color: #6bc06b;

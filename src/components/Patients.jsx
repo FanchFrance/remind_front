@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Table } from "react-bootstrap";
 
+import Header from './Header';
+
+import './styles/patients.css'
+
 class Patients extends Component {
   state = {
     patients: [],
@@ -18,8 +22,11 @@ class Patients extends Component {
     const { patients } = this.state;
 
     return (
-      <div>
-        <div>Page Liste de patients</div>
+      <div className="containpat">
+        <Header />
+        <div className="title">
+          <h2>Mes patients</h2>
+          </div>
         <Table>
           <thead>
             <tr>

@@ -5,6 +5,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Home from "./components/Home";
+import Register from './components/Register';
 import Patients from "./components/Patients";
 import AddPatient from "./components/AddPatient";
 import TreatmentAdd from "./components/TreatmentAdd";
@@ -16,6 +17,9 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/" component={Home} />
+      </Switch>
+      <Switch>
+        <Route exact path="/register" component={Register} />
       </Switch>
       <Switch>
         <Route exact path="/patients" component={Patients} />
@@ -32,8 +36,6 @@ function App() {
       <Switch>
         <Route exact path="/patients/:id/treatment-tracker" component={TreatmentTracker} />
       </Switch>
-
-
       {/* <Switch>
         <Route exact path="/treatment" component={Treatment} />
       </Switch> */}

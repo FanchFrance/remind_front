@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles/home.css';
 
@@ -29,15 +30,20 @@ const Home = () => {
                     </div>
                 </div>
 
-                <button type="submit" className="btton">Submit</button>
-                <p className="forgot-password text-right">
-                    Forgot <a href="#">password?</a>
-                </p>
+                <Link to="/patients">
+                  <button type="submit" className="btton">Me connecter</button>
+                </Link>
+                  <p className="forgot-password text-right">
+                      Forgot <a href="#">password?</a>
+                  </p>
             </form>
       </div>
       
       <div className="register">
-        <button type="submit" className="btton">Créer un Compte</button>
+        <Link to="/register">
+          <button type="submit" className="btton">Créer un Compte</button>
+        </Link>
+        
       </div>
       
     </div>
