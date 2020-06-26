@@ -1,0 +1,73 @@
+.contain {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height:90vh ;
+  padding: 0;
+  border: 1px solid #1B212C;
+  background-image: url("../../img/brain.jpg");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-color: #FFFFFF;
+  background-origin: initial;
+  background-position: -5% 25%;
+}
+
+.headr {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  color: #42B746;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  text-align: center;
+  background-color: #1B212C;
+}
+
+.loging {
+  display: flex;
+  flex-direction: column;
+  height:50vh ;
+  align-items:center;
+  justify-content: center;
+}
+
+.loging h3 {
+  color: #42B746;
+  text-align: center;
+  padding: 0 0 30px 0;
+}
+
+.btton {
+  background-color: #42B746;
+  color: #FFFFFF;
+  border-radius: 5px;
+  border: none;
+  width: 220px;
+  height: 40px;
+  margin: 10px 0;
+}
+
+.forgot-password {
+  color: #42B746;
+}
+
+a {
+  color: #42B746;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  text-align: center;
+  margin: 80px;
+}
+
+.register h3
+
+.register button {
+  background-color: #6bc06b;
+}

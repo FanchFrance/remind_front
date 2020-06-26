@@ -1,0 +1,41 @@
+.container {
+  margin-top: 30px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.patient {
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  background-color: #ABE8EB;
+  width: 15%;
+  justify-content: center;
+}
+
+.patient {
+  background-color: #ABE8EB;
+  width: 20%;
+}
+
+.linkModify {
+  color: red;
+}
+
+.trackertable {
+  border: 1px solid black;
+}
+
+.squareContainer {
+  border: 1px solid #ABE8EB;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
